@@ -1,10 +1,20 @@
 import './App.css';
+import { BrowserRouter,Route,Routes } from 'react-router-dom';
+import Home from './components/Home';
+import Board from './components/Board';
+import Follow from './components/Follow';
 
 function App() {
   return (
-    <div>
-      <h1>React App</h1>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/dashboard" element={<Board/>} />
+          <Route path="/followers" element={<Follow/>}/>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

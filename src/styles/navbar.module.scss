@@ -1,0 +1,57 @@
+.nav{
+    width: 100%;
+    height:55px;
+    margin: 0;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: 1px solid #e6e6e6;
+    backdrop-filter: drop-shadow(10px 10px 10px 10px wheat);
+    img{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    select{
+        width: 100px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #333;
+        cursor: pointer;
+    }
+}
+.leftnav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.rightnav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+@media screen and (max-width: 768px)
+{
+    .nav{
+        padding-left: 10px;
+        padding-right: 10px;
+        .leftnav{
+            gap: 5px;
+        }
+        .rightnav{
+            gap: 5px;
+        }
+    }
+}
+    

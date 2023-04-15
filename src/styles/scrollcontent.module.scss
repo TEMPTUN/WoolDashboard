@@ -1,0 +1,268 @@
+.scrollcontent{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    
+    margin-left: 5%;
+    padding-top: 15%;
+    overflow-x: hidden;
+    background-color: aliceblue;
+    scroll-behavior: smooth;
+    .about{
+        height: 13rem;
+        width: 90%;
+        font-size: larger;
+        padding: 10px;
+        border:1px solid black;
+    }
+
+    button{
+        height: 3rem;
+        width: 10rem;
+        border: 1px solid black;
+        border-radius: 20px;
+        background-color:orange;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-top: 10px;
+        &:hover{
+            background-color: #ccc;
+        }
+    }
+
+    div{
+        height:100%;
+        width:90%;
+        // border:1px solid black;
+        border-bottom: 1px solid rgb(22, 20, 20);
+        border-bottom-left-radius: 20px;
+        box-shadow: 0 0 7px rgba(46, 33, 33, 0.2);
+
+        padding: 50px 50px 50px 50px;
+        h3{
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    }
+    .gridlayout{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        margin-top: 20px;
+        .griditem{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px 20px;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+            .griditemtext{
+                margin-top: 10px;
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+        }
+    }
+    span{
+        input{
+            width: 95%;
+            height: 2rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 0 10px;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+    select{
+        width: 40%;
+        height: 2rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 0 10px;
+        margin-top: 10px;
+        margin-right: 20px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        &:focus{
+            outline: none;
+        }
+    }
+    .lay{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+        .passdiv{
+            input{
+                width: 95%;
+                height: 2rem;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 0 10px;
+                margin-top: 10px;
+                font-size: 1.2rem;
+                font-weight: 600;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            select{
+                width: 40%;
+                height: 2rem;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 0 10px;
+                margin-top: 10px;
+                font-size: 1.2rem;
+                font-weight: 600;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        .last{
+            display: flex;
+            flex-direction: column;
+            select{
+                width: 70%;
+                height: 2rem;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 0 10px;
+                margin-top: 10px;
+                font-size: 1.2rem;
+                font-weight: 600;
+                &:focus{
+                    outline: none;
+                }
+            }
+            button{
+                width: 10rem;
+                height: 3rem;
+                border: 1px solid black;
+                border-radius: 20px;
+                background-color:orange;
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin-top: 10px;
+                &:hover{
+                    background-color: #ccc;
+                }
+            }
+        }
+    }
+    
+
+    @media screen and (max-width: 768px)
+    {
+        .scrollcontent{
+            margin-left: 0;
+            padding-top: 150px;
+            .about{
+                width:70%;
+                height:70px;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+            }
+            button{
+                width: 30%;
+                height: 40px;
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: 600;
+            }
+            .map{
+                display: none;
+            }
+            div{
+                width: 100%;
+                padding: 30px 10px 10px 10px;
+                h3{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                }
+            }
+            .gridlayout{
+                grid-template-columns: repeat(2, 1fr);
+                input{
+                    width: 70%;
+                    height: 2rem;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    padding: 0 10px;
+                    margin-top: 10px;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+            .passdiv{
+                input{
+                    width: 70%;
+                    height: 2rem;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    padding: 0 10px;
+                    margin-top: 10px;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+            .last{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                button{
+                    width: 33%;
+                    height: 40px;
+                    text-decoration: none;
+                    font-size: 1rem;
+                    font-weight: 600;
+                }
+                select{
+                    width: 80%;
+                    height: 2rem;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    padding: 0 10px;
+                    margin-top: 10px;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
