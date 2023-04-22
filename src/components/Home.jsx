@@ -35,7 +35,7 @@ const Home = () => {
         console.log(error.message);
       });
       localStorage.setItem('userid', res.data.id)
-      localStorage.setItem('username', res.data.name)
+      localStorage.setItem('username', name)
       setEmail('')
       setPassword('')
       setName('')
@@ -60,6 +60,7 @@ const Home = () => {
       await axios.get(`${obj.apicall}/api/login?email=${data.email}&password=${data.password}`, data).then(res => {
       if(!localStorage.getItem('userid')){
         localStorage.setItem('userid', res.data.id)
+        localStorage.setItem('username', name)
         navigate('/dashboard')
       }else{
         navigate('/dashboard')
