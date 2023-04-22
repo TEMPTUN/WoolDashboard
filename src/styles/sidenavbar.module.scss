@@ -1,56 +1,88 @@
-.sidenavbar{
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    height: 100vh;
-    width: 4%;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    transition: 0.5s;
-    padding-top: 60px;
-    padding: 5px 5px 5px 5px;
-    border: 1px solid #e6e6e6;
-    gap:10px;
-    backdrop-filter: drop-shadow(10px 10px 10px 10px wheat);
-    span{
-        img{
-            width:70%;
-            height: 100%;
-            // object-fit: cover;
-            border-radius: 50%;
-            padding: 5px 5px 5px 5px;
+
+
+$color-dark: white;
+$width: 280px;
+$width-compressed: 52px;
+
+.sidenav{
+  position: fixed;
+  width: $width;
+  height: 100%;
+  padding-top: 31px;
+  z-index: 3;
+  background-color: $color-dark;
+  box-shadow:0 0 10px 0 rgba(0,0,0,0.2);
+
+  .mainbuttons{
+    list-style-type: none;
+    margin: 64px 0;
+    padding: 0;
+    color:black;
+    li{
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      img{
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+      }
+      div{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    
+    & > li{
+      padding: 16px $width-compressed;
+    //   @include box-sizing(border-box);
+    box-sizing: border-box;
+
+      img{
+        position: absolute;
+        left: 12px;
+        color: lighten($color-dark, 16);
+      }
+
+      &:hover, &:active, &:focus{
+        .hidden{
+          width: $width - $width-compressed;
         }
-        padding: 5px 5px 5px 5px;
-    }
-    span:hover{
-        background-color: #fa5858;
-        border-radius: 5px;
+        background-color:gray;
         cursor: pointer;
-        transition: all 0.3s ease;
+      }
     }
-    .act{
-        position: relative;
-        top:37%;
-        bottom: 0%;
-        border: 1px solid #e6e6e6;
-        border-radius: 15px;
-    }
-    .act:hover{
-        background-color: #fa5858;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
+  }
 }
 
-@media screen and (max-width: 768px)
- {
-    .sidenavbar{
-        display: none;
+.hidden{
+  width: 0;
+  height: 100%;
+  padding: 64px 0;
+  padding-top: 125px;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  overflow: hidden;
+  
+  list-style-type: none;
+  background-color: lighten($color-dark, 5);
+//   @include transition(0.3s);
+    transition: 0.3s;
+  li{
+    padding: 16px 24px;
+    &:hover, &:active, &:focus{
+      background-color: lighten($color-dark, 9);
     }
-    .act{
-        display: none;
-    }    
+  }
+  &:hover, &:active, &:focus{
+    background-color: whitesmoke;
+  }
 }
+
+
+// body{background-color: lighten($color-dark, 68);line-height: 30px;}html,body{height:100%;}@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
